@@ -23,20 +23,8 @@ namespace Blokc
             if (txtBlokc.Modified == true)
             {
                 // vpraši za shranitev dok...
-                DialogResult dg = MessageBox.Show("Ali želiš shraniti trenutni Blok'c?", "Shrani Blok'c?", MessageBoxButtons.YesNoCancel);
-
-
-                if (dg == DialogResult.Yes)
-                {
-                    shraniToolStripMenuItem_Click(sender, e);
-                } else if (sfdShrani.ShowDialog() == DialogResult.Cancel) 
-                {
-                    // e.Cancel = true;
-                    // handling cancel button...
-                } else
-                {
-                    txtBlokc.Clear();
-                }
+                
+                shraniToolStripMenuItem_Click(sender, e);
             }
         }
 
@@ -49,6 +37,21 @@ namespace Blokc
         {
             sfdShrani.Filter = "Blok'c besedila (*.txt)|*.txt|Vse datoteke (*.*)|*.*";
             sfdShrani.FileName = "Neimenovan Blok'c";
+            DialogResult dg = MessageBox.Show("Ali želiš shraniti trenutni Blok'c?", "Shrani Blok'c?", MessageBoxButtons.YesNoCancel);
+
+            if (sfdShrani.ShowDialog() == DialogResult.Yes)
+            {
+                using (var sw = new StreamWriter(sfdShrani.FileName))
+                {
+                    sw.WriteLineAsync(txtBlokc.Text);
+                }
+            } else if (sfdShrani.ShowDialog() == DialogResult.Cancel)
+            {
+
+            } else if (sfdShrani.ShowDialog() == DialogResult.No) 
+            {
+                txtBlokc.Clear();
+            }
         }
 
         private void shraniKotToolStripMenuItem_Click(object sender, EventArgs e)
