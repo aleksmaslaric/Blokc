@@ -22,8 +22,7 @@ namespace Blokc
         {
             if (txtBlokc.Modified == true)
             {
-                // vpraši za shranitev dok...
-                
+                // kliče sfdShrani, če je v txtBlokc zaznana sprememba (zapisan text,...) in uporabnik pritisne na "Nov" v menustrip-u
                 shraniToolStripMenuItem_Click(sender, e);
             }
         }
@@ -39,16 +38,17 @@ namespace Blokc
             sfdShrani.FileName = "Neimenovan Blok'c";
             DialogResult dg = MessageBox.Show("Ali želiš shraniti trenutni Blok'c?", "Shrani Blok'c?", MessageBoxButtons.YesNoCancel);
 
-            if (sfdShrani.ShowDialog() == DialogResult.Yes)
+            if (dg == DialogResult.Yes)
             {
+                sfdShrani.ShowDialog();
                 using (var sw = new StreamWriter(sfdShrani.FileName))
                 {
                     sw.WriteLineAsync(txtBlokc.Text);
                 }
-            } else if (sfdShrani.ShowDialog() == DialogResult.Cancel)
+            } else if (dg == DialogResult.Cancel)
             {
-
-            } else if (sfdShrani.ShowDialog() == DialogResult.No) 
+                // ...
+            } else if (dg == DialogResult.No) 
             {
                 txtBlokc.Clear();
             }
