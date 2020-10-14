@@ -29,7 +29,18 @@ namespace Blokc
 
         private void odpriToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            // odpri datoteko
+            ofdOdpri.Filter = "Blok'c besedila (*.txt)|*.txt|Vse datoteke (*.*)|*.*";
+            ofdOdpri.FilterIndex = 1; // izbran filter (*.txt), 2 = *.*
+            ofdOdpri.RestoreDirectory = true;
 
+            if (ofdOdpri.ShowDialog() == DialogResult.OK)
+            {
+                using (var sr = new StreamReader(ofdOdpri.FileName))
+                {
+                    txtBlokc.Text = sr.ReadToEnd();
+                }
+            }
         }
 
         private void shraniToolStripMenuItem_Click(object sender, EventArgs e)

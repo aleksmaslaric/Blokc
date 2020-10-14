@@ -75,6 +75,7 @@
             this.pomočToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.oProgramuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sfdShrani = new System.Windows.Forms.SaveFileDialog();
+            this.ofdOdpri = new System.Windows.Forms.OpenFileDialog();
             this.mnsMenu.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -208,7 +209,7 @@
             // 
             this.razveljaviToolStripMenuItem.Name = "razveljaviToolStripMenuItem";
             this.razveljaviToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Z)));
-            this.razveljaviToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.razveljaviToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.razveljaviToolStripMenuItem.Text = "Razveljavi";
             this.razveljaviToolStripMenuItem.Click += new System.EventHandler(this.razveljaviToolStripMenuItem_Click);
             // 
@@ -216,20 +217,20 @@
             // 
             this.povrniToolStripMenuItem.Name = "povrniToolStripMenuItem";
             this.povrniToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Y)));
-            this.povrniToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.povrniToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.povrniToolStripMenuItem.Text = "Povrni";
             this.povrniToolStripMenuItem.Click += new System.EventHandler(this.povrniToolStripMenuItem_Click);
             // 
             // toolStripMenuItem3
             // 
             this.toolStripMenuItem3.Name = "toolStripMenuItem3";
-            this.toolStripMenuItem3.Size = new System.Drawing.Size(221, 6);
+            this.toolStripMenuItem3.Size = new System.Drawing.Size(213, 6);
             // 
             // kopirajToolStripMenuItem
             // 
             this.kopirajToolStripMenuItem.Name = "kopirajToolStripMenuItem";
             this.kopirajToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.X)));
-            this.kopirajToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.kopirajToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.kopirajToolStripMenuItem.Text = "Izreži";
             this.kopirajToolStripMenuItem.Click += new System.EventHandler(this.izrežiToolStripMenuItem_Click);
             // 
@@ -237,7 +238,7 @@
             // 
             this.kopirajToolStripMenuItem1.Name = "kopirajToolStripMenuItem1";
             this.kopirajToolStripMenuItem1.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.C)));
-            this.kopirajToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.kopirajToolStripMenuItem1.Size = new System.Drawing.Size(216, 26);
             this.kopirajToolStripMenuItem1.Text = "Kopiraj";
             this.kopirajToolStripMenuItem1.Click += new System.EventHandler(this.kopirajToolStripMenuItem1_Click);
             // 
@@ -245,7 +246,7 @@
             // 
             this.prilepiToolStripMenuItem.Name = "prilepiToolStripMenuItem";
             this.prilepiToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.V)));
-            this.prilepiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.prilepiToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.prilepiToolStripMenuItem.Text = "Prilepi";
             this.prilepiToolStripMenuItem.Click += new System.EventHandler(this.prilepiToolStripMenuItem_Click);
             // 
@@ -254,27 +255,27 @@
             this.izbrišiToolStripMenuItem.Name = "izbrišiToolStripMenuItem";
             this.izbrišiToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)(((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.Alt) 
             | System.Windows.Forms.Keys.W)));
-            this.izbrišiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.izbrišiToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.izbrišiToolStripMenuItem.Text = "Izbriši";
             this.izbrišiToolStripMenuItem.Click += new System.EventHandler(this.izbrišiToolStripMenuItem_Click);
             // 
             // izbrišiVseToolStripMenuItem
             // 
             this.izbrišiVseToolStripMenuItem.Name = "izbrišiVseToolStripMenuItem";
-            this.izbrišiVseToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.izbrišiVseToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.izbrišiVseToolStripMenuItem.Text = "Izbriši vse";
             this.izbrišiVseToolStripMenuItem.Click += new System.EventHandler(this.izbrišiVseToolStripMenuItem_Click);
             // 
             // toolStripMenuItem4
             // 
             this.toolStripMenuItem4.Name = "toolStripMenuItem4";
-            this.toolStripMenuItem4.Size = new System.Drawing.Size(221, 6);
+            this.toolStripMenuItem4.Size = new System.Drawing.Size(213, 6);
             // 
             // izberiVseToolStripMenuItem
             // 
             this.izberiVseToolStripMenuItem.Name = "izberiVseToolStripMenuItem";
             this.izberiVseToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.A)));
-            this.izberiVseToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.izberiVseToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.izberiVseToolStripMenuItem.Text = "Izberi vse";
             this.izberiVseToolStripMenuItem.Click += new System.EventHandler(this.izberiVseToolStripMenuItem_Click);
             // 
@@ -282,7 +283,7 @@
             // 
             this.datumUraToolStripMenuItem.Name = "datumUraToolStripMenuItem";
             this.datumUraToolStripMenuItem.ShortcutKeys = System.Windows.Forms.Keys.F5;
-            this.datumUraToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.datumUraToolStripMenuItem.Size = new System.Drawing.Size(216, 26);
             this.datumUraToolStripMenuItem.Text = "Datum / Ura";
             this.datumUraToolStripMenuItem.Click += new System.EventHandler(this.datumUraToolStripMenuItem_Click);
             // 
@@ -429,21 +430,21 @@
             // povečajToolStripMenuItem
             // 
             this.povečajToolStripMenuItem.Name = "povečajToolStripMenuItem";
-            this.povečajToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.povečajToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.povečajToolStripMenuItem.Text = "Povečaj";
             this.povečajToolStripMenuItem.Click += new System.EventHandler(this.povečajToolStripMenuItem_Click);
             // 
             // pomanjšajToolStripMenuItem
             // 
             this.pomanjšajToolStripMenuItem.Name = "pomanjšajToolStripMenuItem";
-            this.pomanjšajToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.pomanjšajToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.pomanjšajToolStripMenuItem.Text = "Pomanjšaj";
             this.pomanjšajToolStripMenuItem.Click += new System.EventHandler(this.pomanjšajToolStripMenuItem_Click);
             // 
             // prvotniPogledToolStripMenuItem
             // 
             this.prvotniPogledToolStripMenuItem.Name = "prvotniPogledToolStripMenuItem";
-            this.prvotniPogledToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.prvotniPogledToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
             this.prvotniPogledToolStripMenuItem.Text = "Privzeti pogled";
             this.prvotniPogledToolStripMenuItem.Click += new System.EventHandler(this.prvotniPogledToolStripMenuItem_Click);
             // 
@@ -460,14 +461,14 @@
             // 
             this.pomočToolStripMenuItem1.Name = "pomočToolStripMenuItem1";
             this.pomočToolStripMenuItem1.ShortcutKeys = System.Windows.Forms.Keys.F1;
-            this.pomočToolStripMenuItem1.Size = new System.Drawing.Size(224, 26);
+            this.pomočToolStripMenuItem1.Size = new System.Drawing.Size(173, 26);
             this.pomočToolStripMenuItem1.Text = "Pomoč";
             this.pomočToolStripMenuItem1.Click += new System.EventHandler(this.pomočToolStripMenuItem1_Click);
             // 
             // oProgramuToolStripMenuItem
             // 
             this.oProgramuToolStripMenuItem.Name = "oProgramuToolStripMenuItem";
-            this.oProgramuToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.oProgramuToolStripMenuItem.Size = new System.Drawing.Size(173, 26);
             this.oProgramuToolStripMenuItem.Text = "O programu";
             this.oProgramuToolStripMenuItem.Click += new System.EventHandler(this.oProgramuToolStripMenuItem_Click);
             // 
@@ -539,6 +540,7 @@
         private System.Windows.Forms.ToolStripMenuItem pomočToolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem oProgramuToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog sfdShrani;
+        private System.Windows.Forms.OpenFileDialog ofdOdpri;
     }
 }
 
