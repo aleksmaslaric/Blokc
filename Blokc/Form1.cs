@@ -23,7 +23,7 @@ namespace Blokc
             if (txtBlokc.Modified == true)
             {
                 // kliče sfdShrani, če je v txtBlokc zaznana sprememba (zapisan text,...) in uporabnik pritisne na "Nov" v menustrip-u
-                shraniToolStripMenuItem_Click(sender, e);
+                shraniKotToolStripMenuItem_Click(sender, e);
             }
         }
 
@@ -45,6 +45,33 @@ namespace Blokc
 
         private void shraniToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (txtBlokc.Modified == true)
+            {
+                sfdShrani.Filter = "Blok'c besedila (*.txt)|*.txt|Vse datoteke (*.*)|*.*";
+                sfdShrani.FileName = "Neimenovan Blok'c";
+                DialogResult dg = MessageBox.Show("Ali želiš shraniti trenutni Blok'c?", "Shrani Blok'c?", MessageBoxButtons.YesNoCancel);
+
+                if (dg == DialogResult.Yes)
+                {
+                    sfdShrani.ShowDialog();
+                    using (var sw = new StreamWriter(sfdShrani.FileName))
+                    {
+                        sw.WriteLineAsync(txtBlokc.Text);
+                    }
+                }
+                else if (dg == DialogResult.Cancel)
+                {
+                    // ...
+                }
+                else if (dg == DialogResult.No)
+                {
+                    txtBlokc.Clear();
+                }
+            }
+        }
+
+        private void shraniKotToolStripMenuItem_Click(object sender, EventArgs e)
+        {
             sfdShrani.Filter = "Blok'c besedila (*.txt)|*.txt|Vse datoteke (*.*)|*.*";
             sfdShrani.FileName = "Neimenovan Blok'c";
             DialogResult dg = MessageBox.Show("Ali želiš shraniti trenutni Blok'c?", "Shrani Blok'c?", MessageBoxButtons.YesNoCancel);
@@ -56,18 +83,15 @@ namespace Blokc
                 {
                     sw.WriteLineAsync(txtBlokc.Text);
                 }
-            } else if (dg == DialogResult.Cancel)
+            }
+            else if (dg == DialogResult.Cancel)
             {
                 // ...
-            } else if (dg == DialogResult.No) 
+            }
+            else if (dg == DialogResult.No)
             {
                 txtBlokc.Clear();
             }
-        }
-
-        private void shraniKotToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-
         }
 
         private void pripravaStraniToolStripMenuItem_Click(object sender, EventArgs e)
@@ -179,37 +203,61 @@ namespace Blokc
 
         private void maleČrkeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            txtBlokc.SelectedText = txtBlokc.SelectedText.ToLower();
         }
 
         private void vELIKEČRKEToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            txtBlokc.SelectedText = txtBlokc.SelectedText.ToUpper();
         }
 
         private void dodajPikoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                txtBlokc.BulletIndent = 10;
+                txtBlokc.SelectionBullet = true;
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Zgodila se je čudna napača. Poskusi še enkrat.");
+            }
         }
 
         private void odstraniPikoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            try
+            {
+                txtBlokc.BulletIndent = 0;
+                txtBlokc.SelectionBullet = false;
+            } catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message.ToString(), "Zgodila se je čudna napača. Poskusi še enkrat.");
+            }
+            
         }
 
         private void povečajToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (txtBlokc.ZoomFactor < 64.5)
+            {
+                txtBlokc.ZoomFactor = txtBlokc.ZoomFactor + 0.25f;
+            }
         }
 
         private void pomanjšajToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (txtBlokc.ZoomFactor > 0.515625)
+            {
+                txtBlokc.ZoomFactor = txtBlokc.ZoomFactor - 0.125f;
+            }
         }
 
         private void prvotniPogledToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            if (txtBlokc.ZoomFactor > 1 || txtBlokc.ZoomFactor < 1)
+            {
+                txtBlokc.ZoomFactor = 1.0f;
+            }
         }
 
         private void pomočToolStripMenuItem1_Click(object sender, EventArgs e)
@@ -224,7 +272,32 @@ namespace Blokc
 
         private void izhodToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            this.Close();
+            if (txtBlokc.Modified == true)
+            {
+                sfdShrani.Filter = "Blok'c besedila (*.txt)|*.txt|Vse datoteke (*.*)|*.*";
+                sfdShrani.FileName = "Neimenovan Blok'c";
+                DialogResult dg = MessageBox.Show("Ali želiš shraniti trenutni Blok'c?", "Shrani Blok'c?", MessageBoxButtons.YesNoCancel);
+
+                if (dg == DialogResult.Yes)
+                {
+                    sfdShrani.ShowDialog();
+                    using (var sw = new StreamWriter(sfdShrani.FileName))
+                    {
+                        sw.WriteLineAsync(txtBlokc.Text);
+                    }
+                }
+                else if (dg == DialogResult.Cancel)
+                {
+                    // ...
+                }
+                else if (dg == DialogResult.No)
+                {
+                    txtBlokc.Clear();
+                }
+            } else
+            {
+                this.Close();
+            }
         }
     }
 }
