@@ -154,8 +154,8 @@ namespace Blokc
 
         private void datumUraToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            txtBlokc.Text = txtBlokc.Text + Convert.ToString(DateTime.Now) + " ";
-            txtBlokc.Select(txtBlokc.Text.Length, 0); // postavi kazalko tipkovnice na konec dokumenta, oz. za datum in uro.
+            txtBlokc.SelectedText = Convert.ToString(DateTime.Now) + " ";
+            //txtBlokc.Select(txtBlokc.Text.Length, 0); // postavi kazalko tipkovnice na konec dokumenta.
         }
 
         private void wordWrapToolStripMenuItem_Click(object sender, EventArgs e)
