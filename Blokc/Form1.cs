@@ -179,20 +179,21 @@ namespace Blokc
             DialogResult pisava = fdPisava.ShowDialog();
             fdPisava.ShowColor = true;
 
-            // potrebni popravki...
+            // označeno besedilo se spremeni v željen font + neoznačeno besedilo "se nadaljuje" v željenem fontu... 
             if (pisava == DialogResult.OK)
             {
-                if (txtBlokc.SelectedText == txtBlokc.SelectedText)
+                if (txtBlokc.SelectionLength > 0)
                 {
-                    txtBlokc.SelectionColor = fdPisava.Color;
                     txtBlokc.SelectionFont = fdPisava.Font;
-                } else if (pisava == DialogResult.OK && !string.IsNullOrEmpty(txtBlokc.Text))
+                    txtBlokc.SelectionColor = fdPisava.Color;
+                } else if (txtBlokc.Text.Length > 0)
                 {
-                    txtBlokc.ForeColor = fdPisava.Color;
-                    txtBlokc.Font = fdPisava.Font;
+                    txtBlokc.SelectionFont = fdPisava.Font;
+                    txtBlokc.SelectionColor = fdPisava.Color;
                 } else
                 {
                     txtBlokc.Font = fdPisava.Font;
+                    txtBlokc.ForeColor = fdPisava.Color;
                 }
             }
         }
