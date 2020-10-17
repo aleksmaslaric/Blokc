@@ -13,6 +13,8 @@ namespace Blokc
 {
     public partial class frmBlokc : Form
     {
+        private string trenutnaPot;
+        private string staraDat;
         public frmBlokc()
         {
             InitializeComponent();
@@ -174,7 +176,25 @@ namespace Blokc
 
         private void pisavaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
+            DialogResult pisava = fdPisava.ShowDialog();
+            fdPisava.ShowColor = true;
 
+            // potrebni popravki...
+            if (pisava == DialogResult.OK)
+            {
+                if (txtBlokc.SelectedText == txtBlokc.SelectedText)
+                {
+                    txtBlokc.SelectionColor = fdPisava.Color;
+                    txtBlokc.SelectionFont = fdPisava.Font;
+                } else if (pisava == DialogResult.OK && !string.IsNullOrEmpty(txtBlokc.Text))
+                {
+                    txtBlokc.ForeColor = fdPisava.Color;
+                    txtBlokc.Font = fdPisava.Font;
+                } else
+                {
+                    txtBlokc.Font = fdPisava.Font;
+                }
+            }
         }
 
         private void označiToolStripMenuItem_Click(object sender, EventArgs e)

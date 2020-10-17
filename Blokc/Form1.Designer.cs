@@ -76,16 +76,17 @@
             this.oProgramuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sfdShrani = new System.Windows.Forms.SaveFileDialog();
             this.ofdOdpri = new System.Windows.Forms.OpenFileDialog();
+            this.fdPisava = new System.Windows.Forms.FontDialog();
             this.mnsMenu.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtBlokc
             // 
             this.txtBlokc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBlokc.Location = new System.Drawing.Point(0, 28);
+            this.txtBlokc.Location = new System.Drawing.Point(0, 30);
             this.txtBlokc.Margin = new System.Windows.Forms.Padding(4);
             this.txtBlokc.Name = "txtBlokc";
-            this.txtBlokc.Size = new System.Drawing.Size(900, 591);
+            this.txtBlokc.Size = new System.Drawing.Size(900, 589);
             this.txtBlokc.TabIndex = 0;
             this.txtBlokc.Text = "";
             // 
@@ -100,7 +101,7 @@
             this.pomočToolStripMenuItem});
             this.mnsMenu.Location = new System.Drawing.Point(0, 0);
             this.mnsMenu.Name = "mnsMenu";
-            this.mnsMenu.Size = new System.Drawing.Size(900, 28);
+            this.mnsMenu.Size = new System.Drawing.Size(900, 30);
             this.mnsMenu.TabIndex = 1;
             this.mnsMenu.Text = "menuStrip1";
             // 
@@ -472,6 +473,10 @@
             this.oProgramuToolStripMenuItem.Text = "O programu";
             this.oProgramuToolStripMenuItem.Click += new System.EventHandler(this.oProgramuToolStripMenuItem_Click);
             // 
+            // fdPisava
+            // 
+            this.fdPisava.ShowColor = true;
+            // 
             // frmBlokc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
@@ -541,6 +546,7 @@
         private System.Windows.Forms.ToolStripMenuItem oProgramuToolStripMenuItem;
         private System.Windows.Forms.SaveFileDialog sfdShrani;
         private System.Windows.Forms.OpenFileDialog ofdOdpri;
+        private System.Windows.Forms.FontDialog fdPisava;
     }
 }
 
