@@ -71,22 +71,26 @@
             this.povečajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomanjšajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prvotniPogledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.statusnaVrsticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomočToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pomočToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.oProgramuToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sfdShrani = new System.Windows.Forms.SaveFileDialog();
             this.ofdOdpri = new System.Windows.Forms.OpenFileDialog();
             this.fdPisava = new System.Windows.Forms.FontDialog();
+            this.statusnaVrstica = new System.Windows.Forms.StatusStrip();
+            this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.mnsMenu.SuspendLayout();
+            this.statusnaVrstica.SuspendLayout();
             this.SuspendLayout();
             // 
             // txtBlokc
             // 
             this.txtBlokc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBlokc.Location = new System.Drawing.Point(0, 30);
+            this.txtBlokc.Location = new System.Drawing.Point(0, 28);
             this.txtBlokc.Margin = new System.Windows.Forms.Padding(4);
             this.txtBlokc.Name = "txtBlokc";
-            this.txtBlokc.Size = new System.Drawing.Size(900, 589);
+            this.txtBlokc.Size = new System.Drawing.Size(900, 569);
             this.txtBlokc.TabIndex = 0;
             this.txtBlokc.Text = "";
             // 
@@ -101,7 +105,7 @@
             this.pomočToolStripMenuItem});
             this.mnsMenu.Location = new System.Drawing.Point(0, 0);
             this.mnsMenu.Name = "mnsMenu";
-            this.mnsMenu.Size = new System.Drawing.Size(900, 30);
+            this.mnsMenu.Size = new System.Drawing.Size(900, 28);
             this.mnsMenu.TabIndex = 1;
             this.mnsMenu.Text = "menuStrip1";
             // 
@@ -423,7 +427,8 @@
             this.pogledToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.povečajToolStripMenuItem,
             this.pomanjšajToolStripMenuItem,
-            this.prvotniPogledToolStripMenuItem});
+            this.prvotniPogledToolStripMenuItem,
+            this.statusnaVrsticaToolStripMenuItem});
             this.pogledToolStripMenuItem.Name = "pogledToolStripMenuItem";
             this.pogledToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
             this.pogledToolStripMenuItem.Text = "Pogled";
@@ -431,23 +436,31 @@
             // povečajToolStripMenuItem
             // 
             this.povečajToolStripMenuItem.Name = "povečajToolStripMenuItem";
-            this.povečajToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.povečajToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.povečajToolStripMenuItem.Text = "Povečaj";
             this.povečajToolStripMenuItem.Click += new System.EventHandler(this.povečajToolStripMenuItem_Click);
             // 
             // pomanjšajToolStripMenuItem
             // 
             this.pomanjšajToolStripMenuItem.Name = "pomanjšajToolStripMenuItem";
-            this.pomanjšajToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.pomanjšajToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.pomanjšajToolStripMenuItem.Text = "Pomanjšaj";
             this.pomanjšajToolStripMenuItem.Click += new System.EventHandler(this.pomanjšajToolStripMenuItem_Click);
             // 
             // prvotniPogledToolStripMenuItem
             // 
             this.prvotniPogledToolStripMenuItem.Name = "prvotniPogledToolStripMenuItem";
-            this.prvotniPogledToolStripMenuItem.Size = new System.Drawing.Size(192, 26);
+            this.prvotniPogledToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.prvotniPogledToolStripMenuItem.Text = "Privzeti pogled";
             this.prvotniPogledToolStripMenuItem.Click += new System.EventHandler(this.prvotniPogledToolStripMenuItem_Click);
+            // 
+            // statusnaVrsticaToolStripMenuItem
+            // 
+            this.statusnaVrsticaToolStripMenuItem.Checked = true;
+            this.statusnaVrsticaToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.statusnaVrsticaToolStripMenuItem.Name = "statusnaVrsticaToolStripMenuItem";
+            this.statusnaVrsticaToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
+            this.statusnaVrsticaToolStripMenuItem.Text = "Statusna vrstica";
             // 
             // pomočToolStripMenuItem
             // 
@@ -477,6 +490,23 @@
             // 
             this.fdPisava.ShowColor = true;
             // 
+            // statusnaVrstica
+            // 
+            this.statusnaVrstica.AccessibleRole = System.Windows.Forms.AccessibleRole.StatusBar;
+            this.statusnaVrstica.Font = new System.Drawing.Font("Calibri", 11F);
+            this.statusnaVrstica.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.statusnaVrstica.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripStatusLabel1});
+            this.statusnaVrstica.Location = new System.Drawing.Point(0, 597);
+            this.statusnaVrstica.Name = "statusnaVrstica";
+            this.statusnaVrstica.Size = new System.Drawing.Size(900, 22);
+            this.statusnaVrstica.TabIndex = 2;
+            // 
+            // toolStripStatusLabel1
+            // 
+            this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 18);
+            // 
             // frmBlokc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
@@ -484,6 +514,7 @@
             this.ClientSize = new System.Drawing.Size(900, 619);
             this.Controls.Add(this.txtBlokc);
             this.Controls.Add(this.mnsMenu);
+            this.Controls.Add(this.statusnaVrstica);
             this.Font = new System.Drawing.Font("Calibri", 11F);
             this.MainMenuStrip = this.mnsMenu;
             this.Margin = new System.Windows.Forms.Padding(4);
@@ -491,6 +522,8 @@
             this.Text = "Blok\'c";
             this.mnsMenu.ResumeLayout(false);
             this.mnsMenu.PerformLayout();
+            this.statusnaVrstica.ResumeLayout(false);
+            this.statusnaVrstica.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -547,6 +580,9 @@
         private System.Windows.Forms.SaveFileDialog sfdShrani;
         private System.Windows.Forms.OpenFileDialog ofdOdpri;
         private System.Windows.Forms.FontDialog fdPisava;
+        private System.Windows.Forms.StatusStrip statusnaVrstica;
+        private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
+        private System.Windows.Forms.ToolStripMenuItem statusnaVrsticaToolStripMenuItem;
     }
 }
 
