@@ -80,6 +80,7 @@
             this.fdPisava = new System.Windows.Forms.FontDialog();
             this.statusnaVrstica = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.mnsMenu.SuspendLayout();
             this.statusnaVrstica.SuspendLayout();
             this.SuspendLayout();
@@ -87,10 +88,10 @@
             // txtBlokc
             // 
             this.txtBlokc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBlokc.Location = new System.Drawing.Point(0, 28);
+            this.txtBlokc.Location = new System.Drawing.Point(52, 28);
             this.txtBlokc.Margin = new System.Windows.Forms.Padding(4);
             this.txtBlokc.Name = "txtBlokc";
-            this.txtBlokc.Size = new System.Drawing.Size(900, 569);
+            this.txtBlokc.Size = new System.Drawing.Size(848, 569);
             this.txtBlokc.TabIndex = 0;
             this.txtBlokc.Text = "";
             // 
@@ -507,12 +508,23 @@
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
             this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 18);
             // 
+            // textBox1
+            // 
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Left;
+            this.textBox1.Enabled = false;
+            this.textBox1.Location = new System.Drawing.Point(0, 28);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(52, 569);
+            this.textBox1.TabIndex = 3;
+            // 
             // frmBlokc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 619);
             this.Controls.Add(this.txtBlokc);
+            this.Controls.Add(this.textBox1);
             this.Controls.Add(this.mnsMenu);
             this.Controls.Add(this.statusnaVrstica);
             this.Font = new System.Drawing.Font("Calibri", 11F);
@@ -583,6 +595,7 @@
         private System.Windows.Forms.StatusStrip statusnaVrstica;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripMenuItem statusnaVrsticaToolStripMenuItem;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 
