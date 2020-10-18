@@ -20,6 +20,96 @@ namespace Blokc
             InitializeComponent();
         }
 
+        public int sirina()
+        {
+            int s = 25;
+            int linija = txtBlokc.Lines.Length;
+
+            if (linija <= 99)
+            {
+                s = 20 + (int)txtBlokc.Font.Size;
+            } else if (linija <= 999)
+            {
+                s = 30 + (int)txtBlokc.Font.Size;
+            } else
+            {
+                s = 50 + (int)txtBlokc.Font.Size;
+            }
+            return s;
+        }
+
+        public void dodajStLin()
+        {
+            Point pt = new Point(0, 0);
+
+            int PrviIndeks = txtBlokc.GetCharIndexFromPosition(pt);
+            int PrvaLinija = txtBlokc.GetLineFromCharIndex(PrviIndeks);
+
+            pt.X = ClientRectangle.Width;
+            pt.Y = ClientRectangle.Height;
+
+            int ZadnjiIndeks = txtBlokc.GetCharIndexFromPosition(pt);
+            int ZadnjaLinija = txtBlokc.GetLineFromCharIndex(ZadnjiIndeks);
+
+            txtLinije.SelectionAlignment = HorizontalAlignment.Center;
+            txtLinije.Text = "";
+            txtLinije.Width = sirina();
+
+            for (int i = PrvaLinija; i <= ZadnjaLinija; i++)
+            {
+                txtLinije.Text += i + 1 + "\n";
+            }
+        }
+
+        private void frmBlokc_Load(object sender, EventArgs e)
+        {
+            txtLinije.Font = txtBlokc.Font;
+            txtBlokc.Select();
+            dodajStLin();
+        }
+
+        private void txtBlokc_SelectionChanged(object sender, EventArgs e)
+        {
+            Point pt = txtBlokc.GetPositionFromCharIndex(txtBlokc.SelectionStart);
+            if (pt.X == 1)
+            {
+                dodajStLin();
+            }
+        }
+
+        private void txtBlokc_VScroll(object sender, EventArgs e)
+        {
+            txtLinije.Text = "";
+            dodajStLin();
+            txtLinije.Invalidate();
+        }
+
+        private void txtBlokc_TextChanged(object sender, EventArgs e)
+        {
+            if (txtBlokc.Text == "")
+            {
+                dodajStLin();
+            }
+        }
+
+        private void txtBlokc_FontChanged(object sender, EventArgs e)
+        {
+            txtLinije.Font = txtBlokc.Font;
+            txtBlokc.Select();
+            dodajStLin();
+        }
+
+        private void txtLinije_MouseDown(object sender, MouseEventArgs e)
+        {
+            txtBlokc.Select();
+            txtLinije.DeselectAll();
+        }
+
+        private void frmBlokc_Resize(object sender, EventArgs e)
+        {
+            dodajStLin();
+        }
+
         private void novToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (txtBlokc.Modified == true)

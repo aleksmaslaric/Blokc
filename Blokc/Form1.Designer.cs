@@ -80,7 +80,7 @@
             this.fdPisava = new System.Windows.Forms.FontDialog();
             this.statusnaVrstica = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.txtLinije = new System.Windows.Forms.RichTextBox();
             this.mnsMenu.SuspendLayout();
             this.statusnaVrstica.SuspendLayout();
             this.SuspendLayout();
@@ -88,12 +88,13 @@
             // txtBlokc
             // 
             this.txtBlokc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBlokc.Location = new System.Drawing.Point(52, 28);
+            this.txtBlokc.Location = new System.Drawing.Point(48, 28);
             this.txtBlokc.Margin = new System.Windows.Forms.Padding(4);
             this.txtBlokc.Name = "txtBlokc";
-            this.txtBlokc.Size = new System.Drawing.Size(848, 569);
+            this.txtBlokc.Size = new System.Drawing.Size(852, 569);
             this.txtBlokc.TabIndex = 0;
             this.txtBlokc.Text = "";
+            this.txtBlokc.TextChanged += new System.EventHandler(this.txtBlokc_TextChanged);
             // 
             // mnsMenu
             // 
@@ -123,7 +124,7 @@
             this.toolStripMenuItem2,
             this.izhodToolStripMenuItem});
             this.datotekaToolStripMenuItem.Name = "datotekaToolStripMenuItem";
-            this.datotekaToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
+            this.datotekaToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
             this.datotekaToolStripMenuItem.Text = "&Blok\'c";
             // 
             // novToolStripMenuItem
@@ -208,7 +209,7 @@
             this.izberiVseToolStripMenuItem,
             this.datumUraToolStripMenuItem});
             this.urediToolStripMenuItem.Name = "urediToolStripMenuItem";
-            this.urediToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
+            this.urediToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
             this.urediToolStripMenuItem.Text = "&Uredi";
             // 
             // razveljaviToolStripMenuItem
@@ -311,7 +312,7 @@
             this.dodajPikoToolStripMenuItem,
             this.odstraniPikoToolStripMenuItem});
             this.pisavaToolStripMenuItem.Name = "pisavaToolStripMenuItem";
-            this.pisavaToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.pisavaToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
             this.pisavaToolStripMenuItem.Text = "&Pisava";
             // 
             // wordWrapToolStripMenuItem
@@ -431,7 +432,7 @@
             this.prvotniPogledToolStripMenuItem,
             this.statusnaVrsticaToolStripMenuItem});
             this.pogledToolStripMenuItem.Name = "pogledToolStripMenuItem";
-            this.pogledToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.pogledToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
             this.pogledToolStripMenuItem.Text = "Pogled";
             // 
             // povečajToolStripMenuItem
@@ -469,7 +470,7 @@
             this.pomočToolStripMenuItem1,
             this.oProgramuToolStripMenuItem});
             this.pomočToolStripMenuItem.Name = "pomočToolStripMenuItem";
-            this.pomočToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
+            this.pomočToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
             this.pomočToolStripMenuItem.Text = "Pomoč";
             // 
             // pomočToolStripMenuItem1
@@ -506,17 +507,22 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 18);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 16);
             // 
-            // textBox1
+            // txtLinije
             // 
-            this.textBox1.Dock = System.Windows.Forms.DockStyle.Left;
-            this.textBox1.Enabled = false;
-            this.textBox1.Location = new System.Drawing.Point(0, 28);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(52, 569);
-            this.textBox1.TabIndex = 3;
+            this.txtLinije.BackColor = System.Drawing.Color.White;
+            this.txtLinije.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txtLinije.Cursor = System.Windows.Forms.Cursors.PanNE;
+            this.txtLinije.Dock = System.Windows.Forms.DockStyle.Left;
+            this.txtLinije.ForeColor = System.Drawing.Color.Black;
+            this.txtLinije.Location = new System.Drawing.Point(0, 28);
+            this.txtLinije.Name = "txtLinije";
+            this.txtLinije.ReadOnly = true;
+            this.txtLinije.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
+            this.txtLinije.Size = new System.Drawing.Size(48, 569);
+            this.txtLinije.TabIndex = 3;
+            this.txtLinije.Text = "";
             // 
             // frmBlokc
             // 
@@ -524,7 +530,7 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 619);
             this.Controls.Add(this.txtBlokc);
-            this.Controls.Add(this.textBox1);
+            this.Controls.Add(this.txtLinije);
             this.Controls.Add(this.mnsMenu);
             this.Controls.Add(this.statusnaVrstica);
             this.Font = new System.Drawing.Font("Calibri", 11F);
@@ -532,6 +538,7 @@
             this.Margin = new System.Windows.Forms.Padding(4);
             this.Name = "frmBlokc";
             this.Text = "Blok\'c";
+            this.Load += new System.EventHandler(this.frmBlokc_Load);
             this.mnsMenu.ResumeLayout(false);
             this.mnsMenu.PerformLayout();
             this.statusnaVrstica.ResumeLayout(false);
@@ -595,7 +602,7 @@
         private System.Windows.Forms.StatusStrip statusnaVrstica;
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripMenuItem statusnaVrsticaToolStripMenuItem;
-        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.RichTextBox txtLinije;
     }
 }
 
