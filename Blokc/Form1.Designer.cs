@@ -94,6 +94,9 @@
             this.txtBlokc.Size = new System.Drawing.Size(852, 569);
             this.txtBlokc.TabIndex = 0;
             this.txtBlokc.Text = "";
+            this.txtBlokc.SelectionChanged += new System.EventHandler(this.txtBlokc_SelectionChanged);
+            this.txtBlokc.VScroll += new System.EventHandler(this.txtBlokc_VScroll);
+            this.txtBlokc.FontChanged += new System.EventHandler(this.txtBlokc_FontChanged);
             this.txtBlokc.TextChanged += new System.EventHandler(this.txtBlokc_TextChanged);
             // 
             // mnsMenu
@@ -124,7 +127,7 @@
             this.toolStripMenuItem2,
             this.izhodToolStripMenuItem});
             this.datotekaToolStripMenuItem.Name = "datotekaToolStripMenuItem";
-            this.datotekaToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
+            this.datotekaToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.datotekaToolStripMenuItem.Text = "&Blok\'c";
             // 
             // novToolStripMenuItem
@@ -209,7 +212,7 @@
             this.izberiVseToolStripMenuItem,
             this.datumUraToolStripMenuItem});
             this.urediToolStripMenuItem.Name = "urediToolStripMenuItem";
-            this.urediToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
+            this.urediToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.urediToolStripMenuItem.Text = "&Uredi";
             // 
             // razveljaviToolStripMenuItem
@@ -312,7 +315,7 @@
             this.dodajPikoToolStripMenuItem,
             this.odstraniPikoToolStripMenuItem});
             this.pisavaToolStripMenuItem.Name = "pisavaToolStripMenuItem";
-            this.pisavaToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
+            this.pisavaToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.pisavaToolStripMenuItem.Text = "&Pisava";
             // 
             // wordWrapToolStripMenuItem
@@ -432,7 +435,7 @@
             this.prvotniPogledToolStripMenuItem,
             this.statusnaVrsticaToolStripMenuItem});
             this.pogledToolStripMenuItem.Name = "pogledToolStripMenuItem";
-            this.pogledToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
+            this.pogledToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
             this.pogledToolStripMenuItem.Text = "Pogled";
             // 
             // povečajToolStripMenuItem
@@ -470,7 +473,7 @@
             this.pomočToolStripMenuItem1,
             this.oProgramuToolStripMenuItem});
             this.pomočToolStripMenuItem.Name = "pomočToolStripMenuItem";
-            this.pomočToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
+            this.pomočToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.pomočToolStripMenuItem.Text = "Pomoč";
             // 
             // pomočToolStripMenuItem1
@@ -523,6 +526,7 @@
             this.txtLinije.Size = new System.Drawing.Size(48, 569);
             this.txtLinije.TabIndex = 3;
             this.txtLinije.Text = "";
+            this.txtLinije.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtLinije_MouseDown);
             // 
             // frmBlokc
             // 
@@ -539,6 +543,7 @@
             this.Name = "frmBlokc";
             this.Text = "Blok\'c";
             this.Load += new System.EventHandler(this.frmBlokc_Load);
+            this.Resize += new System.EventHandler(this.frmBlokc_Resize);
             this.mnsMenu.ResumeLayout(false);
             this.mnsMenu.PerformLayout();
             this.statusnaVrstica.ResumeLayout(false);

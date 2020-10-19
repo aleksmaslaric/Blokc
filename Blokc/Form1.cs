@@ -55,7 +55,7 @@ namespace Blokc
             txtLinije.Text = "";
             txtLinije.Width = sirina();
 
-            for (int i = PrvaLinija; i <= ZadnjaLinija; i++)
+            for (int i = PrvaLinija; i <= ZadnjaLinija + 1; i++)
             {
                 txtLinije.Text += i + 1 + "\n";
             }
