@@ -56,6 +56,10 @@
             this.wordWrapToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.pisavaToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.označiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rumenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.rdečeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zelenoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.modroToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripSeparator();
             this.krepkoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.poševnoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -338,11 +342,47 @@
             // 
             // označiToolStripMenuItem
             // 
+            this.označiToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.rumenoToolStripMenuItem,
+            this.rdečeToolStripMenuItem,
+            this.zelenoToolStripMenuItem,
+            this.modroToolStripMenuItem});
             this.označiToolStripMenuItem.Name = "označiToolStripMenuItem";
             this.označiToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.V)));
             this.označiToolStripMenuItem.Size = new System.Drawing.Size(231, 26);
             this.označiToolStripMenuItem.Text = "Označi";
-            this.označiToolStripMenuItem.Click += new System.EventHandler(this.označiToolStripMenuItem_Click);
+            // 
+            // rumenoToolStripMenuItem
+            // 
+            this.rumenoToolStripMenuItem.Name = "rumenoToolStripMenuItem";
+            this.rumenoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.V)));
+            this.rumenoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rumenoToolStripMenuItem.Text = "Rumeno";
+            this.rumenoToolStripMenuItem.Click += new System.EventHandler(this.rumenoToolStripMenuItem_Click);
+            // 
+            // rdečeToolStripMenuItem
+            // 
+            this.rdečeToolStripMenuItem.Name = "rdečeToolStripMenuItem";
+            this.rdečeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
+            this.rdečeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rdečeToolStripMenuItem.Text = "Rdeče";
+            this.rdečeToolStripMenuItem.Click += new System.EventHandler(this.rdečeToolStripMenuItem_Click);
+            // 
+            // zelenoToolStripMenuItem
+            // 
+            this.zelenoToolStripMenuItem.Name = "zelenoToolStripMenuItem";
+            this.zelenoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.G)));
+            this.zelenoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zelenoToolStripMenuItem.Text = "Zeleno";
+            this.zelenoToolStripMenuItem.Click += new System.EventHandler(this.zelenoToolStripMenuItem_Click);
+            // 
+            // modroToolStripMenuItem
+            // 
+            this.modroToolStripMenuItem.Name = "modroToolStripMenuItem";
+            this.modroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.B)));
+            this.modroToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.modroToolStripMenuItem.Text = "Modro";
+            this.modroToolStripMenuItem.Click += new System.EventHandler(this.modroToolStripMenuItem_Click);
             // 
             // toolStripMenuItem5
             // 
@@ -608,6 +648,10 @@
         private System.Windows.Forms.ToolStripStatusLabel toolStripStatusLabel1;
         private System.Windows.Forms.ToolStripMenuItem statusnaVrsticaToolStripMenuItem;
         private System.Windows.Forms.RichTextBox txtLinije;
+        private System.Windows.Forms.ToolStripMenuItem rumenoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem rdečeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zelenoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem modroToolStripMenuItem;
     }
 }
 
