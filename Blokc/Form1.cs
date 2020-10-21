@@ -291,41 +291,25 @@ namespace Blokc
         private void rumenoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             txtBlokc.SelectionBackColor = Color.Yellow;
-
-            if (txtBlokc.SelectionBackColor == Color.Yellow)
-            {
-                txtBlokc.ForeColor = Color.Black;
-            }
+            txtBlokc.SelectionColor = Color.Black;
         }
 
         private void rdečeToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            txtBlokc.SelectionBackColor = Color.Red;
-
-            if (txtBlokc.SelectionBackColor == Color.Red)
-            {
-                txtBlokc.ForeColor = Color.Black;
-            }
+            txtBlokc.SelectionBackColor = Color.Crimson;
+            txtBlokc.SelectionColor = Color.Gainsboro;
         }
 
         private void zelenoToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            txtBlokc.SelectionBackColor = Color.Green;
-
-            if (txtBlokc.SelectionBackColor == Color.Green)
-            {
-                txtBlokc.ForeColor = Color.White;
-            }
+            txtBlokc.SelectionBackColor = Color.LawnGreen;
+            txtBlokc.SelectionColor = Color.Black;
         }
 
         private void modroToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            txtBlokc.SelectionBackColor = Color.Blue;
-
-            if (txtBlokc.SelectionBackColor == Color.Blue)
-            {
-                txtBlokc.ForeColor = Color.White;
-            }
+            txtBlokc.SelectionBackColor = Color.RoyalBlue;
+            txtBlokc.SelectionColor = Color.White;
         }
 
         private void krepkoToolStripMenuItem_Click(object sender, EventArgs e)
