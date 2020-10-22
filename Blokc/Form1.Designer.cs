@@ -576,6 +576,10 @@
             // 
             this.printDialog.UseEXDialog = true;
             // 
+            // printDokument
+            // 
+            this.printDokument.PrintPage += new System.Drawing.Printing.PrintPageEventHandler(this.printDokument_PrintPage);
+            // 
             // printPreviewDialog
             // 
             this.printPreviewDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);

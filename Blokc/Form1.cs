@@ -203,6 +203,11 @@ namespace Blokc
             }
         }
 
+        private void printDokument_PrintPage(object sender, System.Drawing.Printing.PrintPageEventArgs e)
+        {
+            e.Graphics.DrawString(txtBlokc.Text, txtBlokc.Font, Brushes.Black, 12, 10);
+        }
+
         private void razveljaviToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // razveljavi
@@ -437,5 +442,7 @@ namespace Blokc
                 this.Close();
             }
         }
+
+        
     }
 }
