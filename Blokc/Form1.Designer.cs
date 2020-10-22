@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(frmBlokc));
             this.txtBlokc = new System.Windows.Forms.RichTextBox();
             this.mnsMenu = new System.Windows.Forms.MenuStrip();
             this.datotekaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -85,6 +86,9 @@
             this.statusnaVrstica = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtLinije = new System.Windows.Forms.RichTextBox();
+            this.printDialog = new System.Windows.Forms.PrintDialog();
+            this.printDokument = new System.Drawing.Printing.PrintDocument();
+            this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.mnsMenu.SuspendLayout();
             this.statusnaVrstica.SuspendLayout();
             this.SuspendLayout();
@@ -356,7 +360,7 @@
             // 
             this.rumenoToolStripMenuItem.Name = "rumenoToolStripMenuItem";
             this.rumenoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.V)));
-            this.rumenoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rumenoToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.rumenoToolStripMenuItem.Text = "Rumeno";
             this.rumenoToolStripMenuItem.Click += new System.EventHandler(this.rumenoToolStripMenuItem_Click);
             // 
@@ -364,7 +368,7 @@
             // 
             this.rdečeToolStripMenuItem.Name = "rdečeToolStripMenuItem";
             this.rdečeToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.R)));
-            this.rdečeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.rdečeToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.rdečeToolStripMenuItem.Text = "Rdeče";
             this.rdečeToolStripMenuItem.Click += new System.EventHandler(this.rdečeToolStripMenuItem_Click);
             // 
@@ -372,7 +376,7 @@
             // 
             this.zelenoToolStripMenuItem.Name = "zelenoToolStripMenuItem";
             this.zelenoToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.G)));
-            this.zelenoToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zelenoToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.zelenoToolStripMenuItem.Text = "Zeleno";
             this.zelenoToolStripMenuItem.Click += new System.EventHandler(this.zelenoToolStripMenuItem_Click);
             // 
@@ -380,7 +384,7 @@
             // 
             this.modroToolStripMenuItem.Name = "modroToolStripMenuItem";
             this.modroToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Alt | System.Windows.Forms.Keys.B)));
-            this.modroToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.modroToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.modroToolStripMenuItem.Text = "Modro";
             this.modroToolStripMenuItem.Click += new System.EventHandler(this.modroToolStripMenuItem_Click);
             // 
@@ -568,6 +572,20 @@
             this.txtLinije.Text = "";
             this.txtLinije.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtLinije_MouseDown);
             // 
+            // printDialog
+            // 
+            this.printDialog.UseEXDialog = true;
+            // 
+            // printPreviewDialog
+            // 
+            this.printPreviewDialog.AutoScrollMargin = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog.AutoScrollMinSize = new System.Drawing.Size(0, 0);
+            this.printPreviewDialog.ClientSize = new System.Drawing.Size(400, 300);
+            this.printPreviewDialog.Enabled = true;
+            this.printPreviewDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog.Icon")));
+            this.printPreviewDialog.Name = "printPreviewDialog";
+            this.printPreviewDialog.Visible = false;
+            // 
             // frmBlokc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
@@ -652,6 +670,9 @@
         private System.Windows.Forms.ToolStripMenuItem rdečeToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem zelenoToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem modroToolStripMenuItem;
+        private System.Windows.Forms.PrintDialog printDialog;
+        private System.Drawing.Printing.PrintDocument printDokument;
+        private System.Windows.Forms.PrintPreviewDialog printPreviewDialog;
     }
 }
 

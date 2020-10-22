@@ -54,9 +54,10 @@ namespace Blokc
             txtLinije.SelectionAlignment = HorizontalAlignment.Center;
             txtLinije.Text = "";
             txtLinije.Width = sirina();
-
+            
             for (int i = PrvaLinija; i <= ZadnjaLinija + 1; i++)
             {
+                /**/
                 txtLinije.Text += i + 1 + "\n";
             }
         }
@@ -188,12 +189,18 @@ namespace Blokc
 
         private void pripravaStraniToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            printPreviewDialog.Document = printDokument;
+            printPreviewDialog.ShowDialog();
         }
 
         private void natisniToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            printPreviewDialog.Document = printDokument;
 
+            if (printDialog.ShowDialog() == DialogResult.OK)
+            {
+                printDokument.Print();
+            }
         }
 
         private void razveljaviToolStripMenuItem_Click(object sender, EventArgs e)
