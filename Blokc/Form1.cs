@@ -33,7 +33,7 @@ namespace Blokc
                 s = 30 + (int)txtBlokc.Font.Size;
             } else
             {
-                s = 50 + (int)txtBlokc.Font.Size;
+                s = 70 + (int)txtBlokc.Font.Size;
             }
             return s;
         }
@@ -55,7 +55,7 @@ namespace Blokc
             txtLinije.Text = "";
             txtLinije.Width = sirina();
             
-            for (int i = PrvaLinija; i <= ZadnjaLinija + 1; i++)
+            for (int i = PrvaLinija; i <= ZadnjaLinija; i++)
             {
                 /**/
                 txtLinije.Text += i + 1 + "\n";
