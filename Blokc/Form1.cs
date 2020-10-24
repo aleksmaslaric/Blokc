@@ -403,6 +403,37 @@ namespace Blokc
             }
         }
 
+        // statusna vrstica
+        private void statusnaVSprememba()
+        {
+            if (statusnaVrstica.Visible)
+            {
+                statusnaVrsticaToolStripMenuItem.Checked = false;
+                statusnaVrstica.Visible = false;
+            } else
+            {
+                statusnaVrsticaToolStripMenuItem.Checked = true;
+                statusnaVrstica.Visible = true;
+            }
+        }
+
+        private void statusnaVPosodobi()
+        {
+            int statusBarLine = txtBlokc.GetLineFromCharIndex(txtBlokc.GetFirstCharIndexOfCurrentLine());
+            int statusBarColumn = txtBlokc.SelectionStart - txtBlokc.GetFirstCharIndexOfCurrentLine();
+            lblStatusBar.Text = "Ln " + statusBarLine.ToString() + ", Col " + statusBarColumn.ToString();
+        }
+
+        private void txtBlokc_Changed (object sender, EventArgs e)
+        {
+            this.statusnaVPosodobi();
+        }
+
+        private void statusnaVrsticaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            statusnaVSprememba();
+        }
+
         private void pomočToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
@@ -442,7 +473,5 @@ namespace Blokc
                 this.Close();
             }
         }
-
-        
     }
 }

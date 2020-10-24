@@ -89,6 +89,7 @@
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.printDokument = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
+            this.lblStatusBar = new System.Windows.Forms.Label();
             this.mnsMenu.SuspendLayout();
             this.statusnaVrstica.SuspendLayout();
             this.SuspendLayout();
@@ -104,6 +105,7 @@
             this.txtBlokc.Text = "";
             this.txtBlokc.SelectionChanged += new System.EventHandler(this.txtBlokc_SelectionChanged);
             this.txtBlokc.VScroll += new System.EventHandler(this.txtBlokc_VScroll);
+            this.txtBlokc.Click += new System.EventHandler(this.txtBlokc_Changed);
             this.txtBlokc.FontChanged += new System.EventHandler(this.txtBlokc_FontChanged);
             this.txtBlokc.TextChanged += new System.EventHandler(this.txtBlokc_TextChanged);
             // 
@@ -510,6 +512,7 @@
             this.statusnaVrsticaToolStripMenuItem.Name = "statusnaVrsticaToolStripMenuItem";
             this.statusnaVrsticaToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.statusnaVrsticaToolStripMenuItem.Text = "Statusna vrstica";
+            this.statusnaVrsticaToolStripMenuItem.Click += new System.EventHandler(this.statusnaVrsticaToolStripMenuItem_Click);
             // 
             // pomočToolStripMenuItem
             // 
@@ -590,11 +593,20 @@
             this.printPreviewDialog.Name = "printPreviewDialog";
             this.printPreviewDialog.Visible = false;
             // 
+            // lblStatusBar
+            // 
+            this.lblStatusBar.AutoSize = true;
+            this.lblStatusBar.Location = new System.Drawing.Point(627, 601);
+            this.lblStatusBar.Name = "lblStatusBar";
+            this.lblStatusBar.Size = new System.Drawing.Size(0, 23);
+            this.lblStatusBar.TabIndex = 4;
+            // 
             // frmBlokc
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(9F, 22F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(900, 619);
+            this.Controls.Add(this.lblStatusBar);
             this.Controls.Add(this.txtBlokc);
             this.Controls.Add(this.txtLinije);
             this.Controls.Add(this.mnsMenu);
@@ -677,6 +689,7 @@
         private System.Windows.Forms.PrintDialog printDialog;
         private System.Drawing.Printing.PrintDocument printDokument;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog;
+        private System.Windows.Forms.Label lblStatusBar;
     }
 }
 
