@@ -55,7 +55,7 @@ namespace Blokc
             txtLinije.Text = "";
             txtLinije.Width = sirina();
             
-            for (int i = PrvaLinija; i <= ZadnjaLinija; i++)
+            for (int i = PrvaLinija; i <= ZadnjaLinija + 1; i++)
             {
                 txtLinije.Text += i + 1 + "\n";
             }
@@ -325,22 +325,75 @@ namespace Blokc
 
         private void krepkoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (txtBlokc.SelectionFont != null)
+            {
+                System.Drawing.Font trenutniFont = txtBlokc.SelectionFont;
+                System.Drawing.FontStyle noviFontStil;
 
+                if (txtBlokc.SelectionFont.Bold == true)
+                {
+                    noviFontStil = FontStyle.Regular;
+                } else
+                {
+                    noviFontStil = FontStyle.Bold;
+                }
+                txtBlokc.SelectionFont = new Font(trenutniFont.FontFamily, trenutniFont.Size, noviFontStil);
+            }
         }
 
         private void poševnoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (txtBlokc.SelectionFont != null)
+            {
+                System.Drawing.Font trenutniFont = txtBlokc.SelectionFont;
+                System.Drawing.FontStyle noviFontStil;
 
+                if (txtBlokc.SelectionFont.Italic == true)
+                {
+                    noviFontStil = FontStyle.Regular;
+                } else
+                {
+                    noviFontStil = FontStyle.Italic;
+                }
+                txtBlokc.SelectionFont = new Font(trenutniFont.FontFamily, trenutniFont.Size, noviFontStil);
+            }
         }
 
         private void podčrtanoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (txtBlokc.SelectionFont != null)
+            {
+                System.Drawing.Font trenutniFont = txtBlokc.SelectionFont;
+                System.Drawing.FontStyle noviFontStil;
 
+                if (txtBlokc.SelectionFont.Underline == true)
+                {
+                    noviFontStil = FontStyle.Regular;
+                } else
+                {
+                    noviFontStil = FontStyle.Underline;
+                }
+                txtBlokc.SelectionFont = new Font(trenutniFont.FontFamily, trenutniFont.Size, noviFontStil);
+            }
         }
 
         private void prečrtanoToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            if (txtBlokc.SelectionFont != null)
+            {
+                System.Drawing.Font trenutniFont = txtBlokc.SelectionFont;
+                System.Drawing.FontStyle noviFontStil;
 
+                if (txtBlokc.SelectionFont.Strikeout == true)
+                {
+                    noviFontStil = FontStyle.Regular;
+                }
+                else
+                {
+                    noviFontStil = FontStyle.Strikeout;
+                }
+                txtBlokc.SelectionFont = new Font(trenutniFont.FontFamily, trenutniFont.Size, noviFontStil);
+            }
         }
 
         private void maleČrkeToolStripMenuItem_Click(object sender, EventArgs e)
