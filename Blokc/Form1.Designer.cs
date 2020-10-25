@@ -97,10 +97,10 @@
             // txtBlokc
             // 
             this.txtBlokc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBlokc.Location = new System.Drawing.Point(48, 30);
+            this.txtBlokc.Location = new System.Drawing.Point(50, 28);
             this.txtBlokc.Margin = new System.Windows.Forms.Padding(4);
             this.txtBlokc.Name = "txtBlokc";
-            this.txtBlokc.Size = new System.Drawing.Size(852, 567);
+            this.txtBlokc.Size = new System.Drawing.Size(850, 569);
             this.txtBlokc.TabIndex = 0;
             this.txtBlokc.Text = "";
             this.txtBlokc.SelectionChanged += new System.EventHandler(this.txtBlokc_SelectionChanged);
@@ -120,7 +120,7 @@
             this.pomočToolStripMenuItem});
             this.mnsMenu.Location = new System.Drawing.Point(0, 0);
             this.mnsMenu.Name = "mnsMenu";
-            this.mnsMenu.Size = new System.Drawing.Size(900, 30);
+            this.mnsMenu.Size = new System.Drawing.Size(900, 28);
             this.mnsMenu.TabIndex = 1;
             this.mnsMenu.Text = "menuStrip1";
             // 
@@ -566,11 +566,11 @@
             this.txtLinije.Cursor = System.Windows.Forms.Cursors.PanNE;
             this.txtLinije.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtLinije.ForeColor = System.Drawing.Color.Black;
-            this.txtLinije.Location = new System.Drawing.Point(0, 30);
+            this.txtLinije.Location = new System.Drawing.Point(0, 28);
             this.txtLinije.Name = "txtLinije";
             this.txtLinije.ReadOnly = true;
             this.txtLinije.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtLinije.Size = new System.Drawing.Size(48, 567);
+            this.txtLinije.Size = new System.Drawing.Size(50, 569);
             this.txtLinije.TabIndex = 3;
             this.txtLinije.Text = "";
             this.txtLinije.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtLinije_MouseDown);
