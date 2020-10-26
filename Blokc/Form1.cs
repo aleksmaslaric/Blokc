@@ -20,6 +20,7 @@ namespace Blokc
             InitializeComponent();
         }
 
+        // širina za txtLinije
         public int sirina()
         {
             int s = 25;
@@ -38,6 +39,7 @@ namespace Blokc
             return s;
         }
 
+        // dodajanje št linij v txtLinije
         public void dodajStLin()
         {
             Point pt = new Point(0, 0);
@@ -55,12 +57,13 @@ namespace Blokc
             txtLinije.Text = "";
             txtLinije.Width = sirina();
             
-            for (int i = PrvaLinija; i <= ZadnjaLinija + 1; i++)
+            for (int i = PrvaLinija; i <= ZadnjaLinija + 1; ++i)
             {
                 txtLinije.Text += i + 1 + "\n";
             }
         }
 
+        // dodatna koda za txtLinije - potrebno prečekirat / popravit določene zadeve (npr. vključen word wrap ne bi smel prikazovati nove linije pri nadaljevanju texta)
         private void frmBlokc_Load(object sender, EventArgs e)
         {
             txtLinije.Font = txtBlokc.Font;
@@ -84,6 +87,7 @@ namespace Blokc
             txtLinije.Invalidate();
         }
 
+        // prikaz podatkov v statusni vrstici + v rtb (txtLinije)
         private void txtBlokc_TextChanged(object sender, EventArgs e)
         {
             // statusna vrstica:
@@ -103,6 +107,7 @@ namespace Blokc
             }
         }
 
+        // koda za pisavo v txtLinije
         private void txtBlokc_FontChanged(object sender, EventArgs e)
         {
             txtLinije.Font = txtBlokc.Font;
@@ -116,11 +121,13 @@ namespace Blokc
             txtLinije.DeselectAll();
         }
 
+        // klicanje metode dodajStLin()
         private void frmBlokc_Resize(object sender, EventArgs e)
         {
             dodajStLin();
         }
 
+        // nov Blok'c
         private void novToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (txtBlokc.Modified == true)
@@ -130,6 +137,7 @@ namespace Blokc
             }
         }
 
+        // odpri Blok'c
         private void odpriToolStripMenuItem_Click(object sender, EventArgs e)
         {
             // odpri datoteko
@@ -146,6 +154,7 @@ namespace Blokc
             }
         }
 
+        // shrani Blok'c
         private void shraniToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (txtBlokc.Modified == true)
@@ -197,12 +206,14 @@ namespace Blokc
             }
         }
 
+        // priprava za tiskanje
         private void pripravaStraniToolStripMenuItem_Click(object sender, EventArgs e)
         {
             printPreviewDialog.Document = printDokument;
             printPreviewDialog.ShowDialog();
         }
 
+        // natisni Blok'c
         private void natisniToolStripMenuItem_Click(object sender, EventArgs e)
         {
             printPreviewDialog.Document = printDokument;
@@ -218,51 +229,45 @@ namespace Blokc
             e.Graphics.DrawString(txtBlokc.Text, txtBlokc.Font, Brushes.Black, 12, 10);
         }
 
+        // razveljavi, povrni, izreži, kopiraj, prilepi, izbriši, izbriši vse (dodaj kodo), izberi vse, datum / ura
         private void razveljaviToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // razveljavi
             txtBlokc.Undo();
         }
 
         private void povrniToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // povrni
             txtBlokc.Redo();
         }
 
         private void izrežiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // izreži
             txtBlokc.Cut();
         }
 
         private void kopirajToolStripMenuItem1_Click(object sender, EventArgs e)
         {
-            // kopiraj
             txtBlokc.Copy();
         }
 
         private void prilepiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // prilepi
             txtBlokc.Paste();
         }
 
         private void izbrišiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // izbriši
             txtBlokc.SelectedText = "";
         }
 
         private void izbrišiVseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // pred izbrisom vprašaj, če želiš vse izbrisati
+            // ...
             txtBlokc.Clear();
         }
 
         private void izberiVseToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // izberi vse
             txtBlokc.SelectAll();
         }
 
@@ -272,9 +277,9 @@ namespace Blokc
             //txtBlokc.Select(txtBlokc.Text.Length, 0); // postavi kazalko tipkovnice na konec dokumenta.
         }
 
+        // word wrap
         private void wordWrapToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            // word wrap + pogojnik
             if (wordWrapToolStripMenuItem.Checked == false)
             {
                 wordWrapToolStripMenuItem.Checked = true;
@@ -286,6 +291,7 @@ namespace Blokc
             }
         }
 
+        // pisava
         private void pisavaToolStripMenuItem1_Click(object sender, EventArgs e)
         {
             DialogResult pisava = fdPisava.ShowDialog();
@@ -310,6 +316,7 @@ namespace Blokc
             }
         }
 
+        // označi / highlight
         private void rumenoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             txtBlokc.SelectionBackColor = Color.Yellow;
@@ -334,6 +341,7 @@ namespace Blokc
             txtBlokc.SelectionColor = Color.White;
         }
 
+        // krepko, ležeče, podčrtano, prečrtano
         private void krepkoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (txtBlokc.SelectionFont != null)
@@ -407,6 +415,7 @@ namespace Blokc
             }
         }
 
+        // male in velike črke
         private void maleČrkeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             txtBlokc.SelectedText = txtBlokc.SelectedText.ToLower();
@@ -417,6 +426,7 @@ namespace Blokc
             txtBlokc.SelectedText = txtBlokc.SelectedText.ToUpper();
         }
 
+        // bullets (pike)
         private void dodajPikoToolStripMenuItem_Click(object sender, EventArgs e)
         {
             try
@@ -442,6 +452,7 @@ namespace Blokc
             
         }
 
+        // zoom
         private void povečajToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (txtBlokc.ZoomFactor < 64.5)
@@ -466,16 +477,19 @@ namespace Blokc
             }
         }
 
+        // pomoč
         private void pomočToolStripMenuItem1_Click(object sender, EventArgs e)
         {
 
         }
 
+        // about
         private void oProgramuToolStripMenuItem_Click(object sender, EventArgs e)
         {
 
         }
 
+        // izhod
         private void izhodToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (txtBlokc.Modified == true)
@@ -507,3 +521,38 @@ namespace Blokc
         }
     }
 }
+
+
+// stara koda
+
+/*
+        private void statusnaVSprememba()
+        {
+            if (statusnaVrstica.Visible)
+            {
+                statusnaVrsticaToolStripMenuItem.Checked = false;
+                statusnaVrstica.Visible = false;
+            } else
+            {
+                statusnaVrsticaToolStripMenuItem.Checked = true;
+                statusnaVrstica.Visible = true;
+            }
+        }
+
+        private void statusnaVPosodobi()
+        {
+            int statusBarLine = txtBlokc.GetLineFromCharIndex(txtBlokc.GetFirstCharIndexOfCurrentLine());
+            int statusBarColumn = txtBlokc.SelectionStart - txtBlokc.GetFirstCharIndexOfCurrentLine();
+            lblStatusBar.Text = "Ln " + statusBarLine.ToString() + ", Col " + statusBarColumn.ToString();
+        }
+
+        private void txtBlokc_Changed (object sender, EventArgs e)
+        {
+            this.statusnaVPosodobi();
+        }
+
+        private void statusnaVrsticaToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            statusnaVSprememba();
+        }
+*/
