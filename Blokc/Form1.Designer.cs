@@ -85,11 +85,12 @@
             this.fdPisava = new System.Windows.Forms.FontDialog();
             this.statusnaVrstica = new System.Windows.Forms.StatusStrip();
             this.toolStripStatusLabel1 = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblStatusBar = new System.Windows.Forms.ToolStripStatusLabel();
+            this.lblStatus = new System.Windows.Forms.ToolStripStatusLabel();
             this.txtLinije = new System.Windows.Forms.RichTextBox();
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.printDokument = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
-            this.lblStatusBar = new System.Windows.Forms.ToolStripStatusLabel();
             this.mnsMenu.SuspendLayout();
             this.statusnaVrstica.SuspendLayout();
             this.SuspendLayout();
@@ -105,7 +106,6 @@
             this.txtBlokc.Text = "";
             this.txtBlokc.SelectionChanged += new System.EventHandler(this.txtBlokc_SelectionChanged);
             this.txtBlokc.VScroll += new System.EventHandler(this.txtBlokc_VScroll);
-            this.txtBlokc.Click += new System.EventHandler(this.txtBlokc_Changed);
             this.txtBlokc.FontChanged += new System.EventHandler(this.txtBlokc_FontChanged);
             this.txtBlokc.TextChanged += new System.EventHandler(this.txtBlokc_TextChanged);
             // 
@@ -512,7 +512,6 @@
             this.statusnaVrsticaToolStripMenuItem.Name = "statusnaVrsticaToolStripMenuItem";
             this.statusnaVrsticaToolStripMenuItem.Size = new System.Drawing.Size(194, 26);
             this.statusnaVrsticaToolStripMenuItem.Text = "Statusna vrstica";
-            this.statusnaVrsticaToolStripMenuItem.Click += new System.EventHandler(this.statusnaVrsticaToolStripMenuItem_Click);
             // 
             // pomočToolStripMenuItem
             // 
@@ -549,7 +548,8 @@
             this.statusnaVrstica.ImageScalingSize = new System.Drawing.Size(20, 20);
             this.statusnaVrstica.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.toolStripStatusLabel1,
-            this.lblStatusBar});
+            this.lblStatusBar,
+            this.lblStatus});
             this.statusnaVrstica.Location = new System.Drawing.Point(0, 597);
             this.statusnaVrstica.Name = "statusnaVrstica";
             this.statusnaVrstica.Size = new System.Drawing.Size(900, 22);
@@ -558,7 +558,18 @@
             // toolStripStatusLabel1
             // 
             this.toolStripStatusLabel1.Name = "toolStripStatusLabel1";
-            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 23);
+            this.toolStripStatusLabel1.Size = new System.Drawing.Size(0, 16);
+            // 
+            // lblStatusBar
+            // 
+            this.lblStatusBar.Name = "lblStatusBar";
+            this.lblStatusBar.Size = new System.Drawing.Size(0, 16);
+            this.lblStatusBar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
+            // 
+            // lblStatus
+            // 
+            this.lblStatus.Name = "lblStatus";
+            this.lblStatus.Size = new System.Drawing.Size(0, 16);
             // 
             // txtLinije
             // 
@@ -593,13 +604,6 @@
             this.printPreviewDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog.Icon")));
             this.printPreviewDialog.Name = "printPreviewDialog";
             this.printPreviewDialog.Visible = false;
-            // 
-            // lblStatusBar
-            // 
-            this.lblStatusBar.Name = "lblStatusBar";
-            this.lblStatusBar.Size = new System.Drawing.Size(0, 18);
-            this.lblStatusBar.TextAlign = System.Drawing.ContentAlignment.BottomRight;
-            this.lblStatusBar.Click += new System.EventHandler(this.txtBlokc_Changed);
             // 
             // frmBlokc
             // 
@@ -689,6 +693,7 @@
         private System.Drawing.Printing.PrintDocument printDokument;
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog;
         private System.Windows.Forms.ToolStripStatusLabel lblStatusBar;
+        private System.Windows.Forms.ToolStripStatusLabel lblStatus;
     }
 }
 

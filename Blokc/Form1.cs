@@ -86,6 +86,17 @@ namespace Blokc
 
         private void txtBlokc_TextChanged(object sender, EventArgs e)
         {
+            // statusna vrstica:
+            int stLinij = txtBlokc.Lines.Length;
+            txtLinije.Text = "";
+
+            for (int i = 0; i != stLinij; ++i)
+            {
+                txtLinije.AppendText((i + 1) + "\n");
+            }
+            lblStatus.Text = "Linija: " + stLinij.ToString() + " - Znaki: " + txtBlokc.Text.Length.ToString();
+
+            // prikaz linij na levi strani (txtLinije)
             if (txtBlokc.Text == "")
             {
                 dodajStLin();
@@ -453,37 +464,6 @@ namespace Blokc
             {
                 txtBlokc.ZoomFactor = 1.0f;
             }
-        }
-
-        // statusna vrstica
-        private void statusnaVSprememba()
-        {
-            if (statusnaVrstica.Visible)
-            {
-                statusnaVrsticaToolStripMenuItem.Checked = false;
-                statusnaVrstica.Visible = false;
-            } else
-            {
-                statusnaVrsticaToolStripMenuItem.Checked = true;
-                statusnaVrstica.Visible = true;
-            }
-        }
-
-        private void statusnaVPosodobi()
-        {
-            int statusBarLine = txtBlokc.GetLineFromCharIndex(txtBlokc.GetFirstCharIndexOfCurrentLine());
-            int statusBarColumn = txtBlokc.SelectionStart - txtBlokc.GetFirstCharIndexOfCurrentLine();
-            lblStatusBar.Text = "Ln " + statusBarLine.ToString() + ", Col " + statusBarColumn.ToString();
-        }
-
-        private void txtBlokc_Changed (object sender, EventArgs e)
-        {
-            this.statusnaVPosodobi();
-        }
-
-        private void statusnaVrsticaToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            statusnaVSprememba();
         }
 
         private void pomočToolStripMenuItem1_Click(object sender, EventArgs e)
