@@ -13,8 +13,6 @@ namespace Blokc
 {
     public partial class frmBlokc : Form
     {
-        private string trenutnaPot;
-        private string staraDat;
         public frmBlokc()
         {
             InitializeComponent();

@@ -98,10 +98,10 @@
             // txtBlokc
             // 
             this.txtBlokc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBlokc.Location = new System.Drawing.Point(50, 28);
+            this.txtBlokc.Location = new System.Drawing.Point(50, 30);
             this.txtBlokc.Margin = new System.Windows.Forms.Padding(4);
             this.txtBlokc.Name = "txtBlokc";
-            this.txtBlokc.Size = new System.Drawing.Size(850, 569);
+            this.txtBlokc.Size = new System.Drawing.Size(850, 567);
             this.txtBlokc.TabIndex = 0;
             this.txtBlokc.Text = "";
             this.txtBlokc.SelectionChanged += new System.EventHandler(this.txtBlokc_SelectionChanged);
@@ -120,7 +120,7 @@
             this.pomočToolStripMenuItem});
             this.mnsMenu.Location = new System.Drawing.Point(0, 0);
             this.mnsMenu.Name = "mnsMenu";
-            this.mnsMenu.Size = new System.Drawing.Size(900, 28);
+            this.mnsMenu.Size = new System.Drawing.Size(900, 30);
             this.mnsMenu.TabIndex = 1;
             this.mnsMenu.Text = "menuStrip1";
             // 
@@ -137,7 +137,7 @@
             this.toolStripMenuItem2,
             this.izhodToolStripMenuItem});
             this.datotekaToolStripMenuItem.Name = "datotekaToolStripMenuItem";
-            this.datotekaToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
+            this.datotekaToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
             this.datotekaToolStripMenuItem.Text = "&Blok\'c";
             // 
             // novToolStripMenuItem
@@ -222,7 +222,7 @@
             this.izberiVseToolStripMenuItem,
             this.datumUraToolStripMenuItem});
             this.urediToolStripMenuItem.Name = "urediToolStripMenuItem";
-            this.urediToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
+            this.urediToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
             this.urediToolStripMenuItem.Text = "&Uredi";
             // 
             // razveljaviToolStripMenuItem
@@ -325,7 +325,7 @@
             this.dodajPikoToolStripMenuItem,
             this.odstraniPikoToolStripMenuItem});
             this.pisavaToolStripMenuItem.Name = "pisavaToolStripMenuItem";
-            this.pisavaToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
+            this.pisavaToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
             this.pisavaToolStripMenuItem.Text = "&Pisava";
             // 
             // wordWrapToolStripMenuItem
@@ -481,7 +481,7 @@
             this.prvotniPogledToolStripMenuItem,
             this.statusnaVrsticaToolStripMenuItem});
             this.pogledToolStripMenuItem.Name = "pogledToolStripMenuItem";
-            this.pogledToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
+            this.pogledToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
             this.pogledToolStripMenuItem.Text = "Pogled";
             // 
             // povečajToolStripMenuItem
@@ -519,7 +519,7 @@
             this.pomočToolStripMenuItem1,
             this.oProgramuToolStripMenuItem});
             this.pomočToolStripMenuItem.Name = "pomočToolStripMenuItem";
-            this.pomočToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
+            this.pomočToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
             this.pomočToolStripMenuItem.Text = "Pomoč";
             // 
             // pomočToolStripMenuItem1
@@ -578,11 +578,11 @@
             this.txtLinije.Cursor = System.Windows.Forms.Cursors.PanNE;
             this.txtLinije.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtLinije.ForeColor = System.Drawing.Color.Black;
-            this.txtLinije.Location = new System.Drawing.Point(0, 28);
+            this.txtLinije.Location = new System.Drawing.Point(0, 30);
             this.txtLinije.Name = "txtLinije";
             this.txtLinije.ReadOnly = true;
             this.txtLinije.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtLinije.Size = new System.Drawing.Size(50, 569);
+            this.txtLinije.Size = new System.Drawing.Size(50, 567);
             this.txtLinije.TabIndex = 3;
             this.txtLinije.Text = "";
             this.txtLinije.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtLinije_MouseDown);
