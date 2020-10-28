@@ -13,6 +13,7 @@ namespace Blokc
 {
     public partial class frmBlokc : Form
     {
+        public static int stevec = 1;
         public frmBlokc()
         {
             InitializeComponent();

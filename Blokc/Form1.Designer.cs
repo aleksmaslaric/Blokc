@@ -91,6 +91,9 @@
             this.printDialog = new System.Windows.Forms.PrintDialog();
             this.printDokument = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
+            this.oknoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.zapriVseZavihkeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripSeparator();
             this.mnsMenu.SuspendLayout();
             this.statusnaVrstica.SuspendLayout();
             this.SuspendLayout();
@@ -98,10 +101,10 @@
             // txtBlokc
             // 
             this.txtBlokc.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.txtBlokc.Location = new System.Drawing.Point(50, 30);
+            this.txtBlokc.Location = new System.Drawing.Point(50, 28);
             this.txtBlokc.Margin = new System.Windows.Forms.Padding(4);
             this.txtBlokc.Name = "txtBlokc";
-            this.txtBlokc.Size = new System.Drawing.Size(850, 567);
+            this.txtBlokc.Size = new System.Drawing.Size(850, 569);
             this.txtBlokc.TabIndex = 0;
             this.txtBlokc.Text = "";
             this.txtBlokc.SelectionChanged += new System.EventHandler(this.txtBlokc_SelectionChanged);
@@ -117,10 +120,11 @@
             this.urediToolStripMenuItem,
             this.pisavaToolStripMenuItem,
             this.pogledToolStripMenuItem,
+            this.oknoToolStripMenuItem,
             this.pomočToolStripMenuItem});
             this.mnsMenu.Location = new System.Drawing.Point(0, 0);
             this.mnsMenu.Name = "mnsMenu";
-            this.mnsMenu.Size = new System.Drawing.Size(900, 30);
+            this.mnsMenu.Size = new System.Drawing.Size(900, 28);
             this.mnsMenu.TabIndex = 1;
             this.mnsMenu.Text = "menuStrip1";
             // 
@@ -137,7 +141,7 @@
             this.toolStripMenuItem2,
             this.izhodToolStripMenuItem});
             this.datotekaToolStripMenuItem.Name = "datotekaToolStripMenuItem";
-            this.datotekaToolStripMenuItem.Size = new System.Drawing.Size(62, 26);
+            this.datotekaToolStripMenuItem.Size = new System.Drawing.Size(62, 24);
             this.datotekaToolStripMenuItem.Text = "&Blok\'c";
             // 
             // novToolStripMenuItem
@@ -222,7 +226,7 @@
             this.izberiVseToolStripMenuItem,
             this.datumUraToolStripMenuItem});
             this.urediToolStripMenuItem.Name = "urediToolStripMenuItem";
-            this.urediToolStripMenuItem.Size = new System.Drawing.Size(59, 26);
+            this.urediToolStripMenuItem.Size = new System.Drawing.Size(59, 24);
             this.urediToolStripMenuItem.Text = "&Uredi";
             // 
             // razveljaviToolStripMenuItem
@@ -325,7 +329,7 @@
             this.dodajPikoToolStripMenuItem,
             this.odstraniPikoToolStripMenuItem});
             this.pisavaToolStripMenuItem.Name = "pisavaToolStripMenuItem";
-            this.pisavaToolStripMenuItem.Size = new System.Drawing.Size(64, 26);
+            this.pisavaToolStripMenuItem.Size = new System.Drawing.Size(64, 24);
             this.pisavaToolStripMenuItem.Text = "&Pisava";
             // 
             // wordWrapToolStripMenuItem
@@ -481,7 +485,7 @@
             this.prvotniPogledToolStripMenuItem,
             this.statusnaVrsticaToolStripMenuItem});
             this.pogledToolStripMenuItem.Name = "pogledToolStripMenuItem";
-            this.pogledToolStripMenuItem.Size = new System.Drawing.Size(69, 26);
+            this.pogledToolStripMenuItem.Size = new System.Drawing.Size(69, 24);
             this.pogledToolStripMenuItem.Text = "Pogled";
             // 
             // povečajToolStripMenuItem
@@ -519,7 +523,7 @@
             this.pomočToolStripMenuItem1,
             this.oProgramuToolStripMenuItem});
             this.pomočToolStripMenuItem.Name = "pomočToolStripMenuItem";
-            this.pomočToolStripMenuItem.Size = new System.Drawing.Size(68, 26);
+            this.pomočToolStripMenuItem.Size = new System.Drawing.Size(68, 24);
             this.pomočToolStripMenuItem.Text = "Pomoč";
             // 
             // pomočToolStripMenuItem1
@@ -578,11 +582,11 @@
             this.txtLinije.Cursor = System.Windows.Forms.Cursors.PanNE;
             this.txtLinije.Dock = System.Windows.Forms.DockStyle.Left;
             this.txtLinije.ForeColor = System.Drawing.Color.Black;
-            this.txtLinije.Location = new System.Drawing.Point(0, 30);
+            this.txtLinije.Location = new System.Drawing.Point(0, 28);
             this.txtLinije.Name = "txtLinije";
             this.txtLinije.ReadOnly = true;
             this.txtLinije.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.None;
-            this.txtLinije.Size = new System.Drawing.Size(50, 567);
+            this.txtLinije.Size = new System.Drawing.Size(50, 569);
             this.txtLinije.TabIndex = 3;
             this.txtLinije.Text = "";
             this.txtLinije.MouseDown += new System.Windows.Forms.MouseEventHandler(this.txtLinije_MouseDown);
@@ -604,6 +608,26 @@
             this.printPreviewDialog.Icon = ((System.Drawing.Icon)(resources.GetObject("printPreviewDialog.Icon")));
             this.printPreviewDialog.Name = "printPreviewDialog";
             this.printPreviewDialog.Visible = false;
+            // 
+            // oknoToolStripMenuItem
+            // 
+            this.oknoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.zapriVseZavihkeToolStripMenuItem,
+            this.toolStripMenuItem8});
+            this.oknoToolStripMenuItem.Name = "oknoToolStripMenuItem";
+            this.oknoToolStripMenuItem.Size = new System.Drawing.Size(58, 24);
+            this.oknoToolStripMenuItem.Text = "Okno";
+            // 
+            // zapriVseZavihkeToolStripMenuItem
+            // 
+            this.zapriVseZavihkeToolStripMenuItem.Name = "zapriVseZavihkeToolStripMenuItem";
+            this.zapriVseZavihkeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zapriVseZavihkeToolStripMenuItem.Text = "Zapri vsa okna";
+            // 
+            // toolStripMenuItem8
+            // 
+            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(221, 6);
             // 
             // frmBlokc
             // 
@@ -694,6 +718,9 @@
         private System.Windows.Forms.PrintPreviewDialog printPreviewDialog;
         private System.Windows.Forms.ToolStripStatusLabel lblStatusBar;
         private System.Windows.Forms.ToolStripStatusLabel lblStatus;
+        private System.Windows.Forms.ToolStripMenuItem oknoToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem zapriVseZavihkeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripSeparator toolStripMenuItem8;
     }
 }
 
