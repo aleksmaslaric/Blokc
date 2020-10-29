@@ -476,6 +476,11 @@ namespace Blokc
             }
         }
 
+        private void iščiToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+
+        }
+
         // pomoč
         private void pomočToolStripMenuItem1_Click(object sender, EventArgs e)
         {
