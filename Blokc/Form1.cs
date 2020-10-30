@@ -478,7 +478,8 @@ namespace Blokc
 
         private void iščiToolStripMenuItem_Click(object sender, EventArgs e)
         {
-
+            Iskalnik iskalnik = new Iskalnik();
+            iskalnik.Show();
         }
 
         // pomoč

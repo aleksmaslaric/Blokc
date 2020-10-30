@@ -16,5 +16,20 @@ namespace Blokc
         {
             InitializeComponent();
         }
+        private void btnPoisci_Click(object sender, EventArgs e)
+        {
+            int indeks = 0;
+            
+        }
+
+        private void btnZamenjaj_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void btnPreklici_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
