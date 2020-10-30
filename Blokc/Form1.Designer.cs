@@ -76,6 +76,7 @@
             this.pomanjšajToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.prvotniPogledToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.statusnaVrsticaToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.iščiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.oknoToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.zapriVseZavihkeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripSeparator();
@@ -94,7 +95,6 @@
             this.printDokument = new System.Drawing.Printing.PrintDocument();
             this.printPreviewDialog = new System.Windows.Forms.PrintPreviewDialog();
             this.txtBlokc = new System.Windows.Forms.RichTextBox();
-            this.iščiToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.mnsMenu.SuspendLayout();
             this.statusnaVrstica.SuspendLayout();
             this.SuspendLayout();
@@ -505,6 +505,14 @@
             this.statusnaVrsticaToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
             this.statusnaVrsticaToolStripMenuItem.Text = "Statusna vrstica";
             // 
+            // iščiToolStripMenuItem
+            // 
+            this.iščiToolStripMenuItem.Name = "iščiToolStripMenuItem";
+            this.iščiToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
+            this.iščiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.iščiToolStripMenuItem.Text = "Išči";
+            this.iščiToolStripMenuItem.Click += new System.EventHandler(this.iščiToolStripMenuItem_Click);
+            // 
             // oknoToolStripMenuItem
             // 
             this.oknoToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
@@ -517,13 +525,13 @@
             // zapriVseZavihkeToolStripMenuItem
             // 
             this.zapriVseZavihkeToolStripMenuItem.Name = "zapriVseZavihkeToolStripMenuItem";
-            this.zapriVseZavihkeToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
+            this.zapriVseZavihkeToolStripMenuItem.Size = new System.Drawing.Size(188, 26);
             this.zapriVseZavihkeToolStripMenuItem.Text = "Zapri vsa okna";
             // 
             // toolStripMenuItem8
             // 
             this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Size = new System.Drawing.Size(221, 6);
+            this.toolStripMenuItem8.Size = new System.Drawing.Size(185, 6);
             // 
             // pomočToolStripMenuItem
             // 
@@ -630,14 +638,6 @@
             this.txtBlokc.VScroll += new System.EventHandler(this.txtBlokc_VScroll);
             this.txtBlokc.FontChanged += new System.EventHandler(this.txtBlokc_FontChanged);
             this.txtBlokc.TextChanged += new System.EventHandler(this.txtBlokc_TextChanged);
-            // 
-            // iščiToolStripMenuItem
-            // 
-            this.iščiToolStripMenuItem.Name = "iščiToolStripMenuItem";
-            this.iščiToolStripMenuItem.ShortcutKeys = ((System.Windows.Forms.Keys)((System.Windows.Forms.Keys.Control | System.Windows.Forms.Keys.F)));
-            this.iščiToolStripMenuItem.Size = new System.Drawing.Size(224, 26);
-            this.iščiToolStripMenuItem.Text = "Išči";
-            this.iščiToolStripMenuItem.Click += new System.EventHandler(this.iščiToolStripMenuItem_Click);
             // 
             // frmBlokc
             // 

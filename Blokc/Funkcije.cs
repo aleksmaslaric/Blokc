@@ -8,6 +8,8 @@ namespace Blokc
 {
     class Funkcije
     {
+        public static string najdiTxt { get; set; }
 
+        
     }
 }

@@ -35,13 +35,15 @@
             this.btnPreklici = new System.Windows.Forms.Button();
             this.textBox1 = new System.Windows.Forms.TextBox();
             this.lblZamenjaj = new System.Windows.Forms.Label();
+            this.btnNajdiVse = new System.Windows.Forms.Button();
+            this.btnNazaj = new System.Windows.Forms.Button();
             this.SuspendLayout();
             // 
             // lblPoisci
             // 
             this.lblPoisci.AutoSize = true;
             this.lblPoisci.Font = new System.Drawing.Font("Calibri", 11F);
-            this.lblPoisci.Location = new System.Drawing.Point(14, 70);
+            this.lblPoisci.Location = new System.Drawing.Point(11, 34);
             this.lblPoisci.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblPoisci.Name = "lblPoisci";
             this.lblPoisci.Size = new System.Drawing.Size(59, 23);
@@ -51,7 +53,7 @@
             // txtPoisci
             // 
             this.txtPoisci.Font = new System.Drawing.Font("Calibri", 11F);
-            this.txtPoisci.Location = new System.Drawing.Point(117, 70);
+            this.txtPoisci.Location = new System.Drawing.Point(114, 34);
             this.txtPoisci.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.txtPoisci.Name = "txtPoisci";
             this.txtPoisci.Size = new System.Drawing.Size(220, 30);
@@ -65,7 +67,7 @@
             this.btnPoisci.Name = "btnPoisci";
             this.btnPoisci.Size = new System.Drawing.Size(126, 53);
             this.btnPoisci.TabIndex = 2;
-            this.btnPoisci.Text = "POIŠČI";
+            this.btnPoisci.Text = "NAPREJ";
             this.btnPoisci.UseVisualStyleBackColor = true;
             this.btnPoisci.Click += new System.EventHandler(this.btnPoisci_Click);
             // 
@@ -96,7 +98,7 @@
             // textBox1
             // 
             this.textBox1.Font = new System.Drawing.Font("Calibri", 11F);
-            this.textBox1.Location = new System.Drawing.Point(117, 150);
+            this.textBox1.Location = new System.Drawing.Point(114, 114);
             this.textBox1.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(220, 30);
@@ -106,18 +108,42 @@
             // 
             this.lblZamenjaj.AutoSize = true;
             this.lblZamenjaj.Font = new System.Drawing.Font("Calibri", 11F);
-            this.lblZamenjaj.Location = new System.Drawing.Point(14, 150);
+            this.lblZamenjaj.Location = new System.Drawing.Point(11, 114);
             this.lblZamenjaj.Margin = new System.Windows.Forms.Padding(5, 0, 5, 0);
             this.lblZamenjaj.Name = "lblZamenjaj";
             this.lblZamenjaj.Size = new System.Drawing.Size(86, 23);
             this.lblZamenjaj.TabIndex = 5;
             this.lblZamenjaj.Text = "Zamenjaj:";
             // 
+            // btnNajdiVse
+            // 
+            this.btnNajdiVse.Font = new System.Drawing.Font("Calibri", 11F);
+            this.btnNajdiVse.Location = new System.Drawing.Point(15, 180);
+            this.btnNajdiVse.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnNajdiVse.Name = "btnNajdiVse";
+            this.btnNajdiVse.Size = new System.Drawing.Size(126, 53);
+            this.btnNajdiVse.TabIndex = 7;
+            this.btnNajdiVse.Text = "NAJDI VSE";
+            this.btnNajdiVse.UseVisualStyleBackColor = true;
+            // 
+            // btnNazaj
+            // 
+            this.btnNazaj.Font = new System.Drawing.Font("Calibri", 11F);
+            this.btnNazaj.Location = new System.Drawing.Point(194, 180);
+            this.btnNazaj.Margin = new System.Windows.Forms.Padding(5, 4, 5, 4);
+            this.btnNazaj.Name = "btnNazaj";
+            this.btnNazaj.Size = new System.Drawing.Size(126, 53);
+            this.btnNazaj.TabIndex = 8;
+            this.btnNazaj.Text = "NAZAJ";
+            this.btnNazaj.UseVisualStyleBackColor = true;
+            // 
             // Iskalnik
             // 
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.None;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(535, 259);
+            this.Controls.Add(this.btnNazaj);
+            this.Controls.Add(this.btnNajdiVse);
             this.Controls.Add(this.textBox1);
             this.Controls.Add(this.lblZamenjaj);
             this.Controls.Add(this.btnPreklici);
@@ -146,5 +172,7 @@
         private System.Windows.Forms.Button btnPreklici;
         private System.Windows.Forms.TextBox textBox1;
         private System.Windows.Forms.Label lblZamenjaj;
+        private System.Windows.Forms.Button btnNajdiVse;
+        private System.Windows.Forms.Button btnNazaj;
     }
 }
