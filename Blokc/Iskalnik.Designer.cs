@@ -67,7 +67,7 @@
             this.btnPoisci.Name = "btnPoisci";
             this.btnPoisci.Size = new System.Drawing.Size(126, 53);
             this.btnPoisci.TabIndex = 2;
-            this.btnPoisci.Text = "NAPREJ";
+            this.btnPoisci.Text = "Naprej";
             this.btnPoisci.UseVisualStyleBackColor = true;
             this.btnPoisci.Click += new System.EventHandler(this.btnPoisci_Click);
             // 
@@ -79,7 +79,7 @@
             this.btnZamenjaj.Name = "btnZamenjaj";
             this.btnZamenjaj.Size = new System.Drawing.Size(126, 53);
             this.btnZamenjaj.TabIndex = 3;
-            this.btnZamenjaj.Text = "ZAMENJAJ";
+            this.btnZamenjaj.Text = "Zamenjaj";
             this.btnZamenjaj.UseVisualStyleBackColor = true;
             this.btnZamenjaj.Click += new System.EventHandler(this.btnZamenjaj_Click);
             // 
@@ -91,7 +91,7 @@
             this.btnPreklici.Name = "btnPreklici";
             this.btnPreklici.Size = new System.Drawing.Size(126, 53);
             this.btnPreklici.TabIndex = 4;
-            this.btnPreklici.Text = "PREKLIČI";
+            this.btnPreklici.Text = "Prekliči";
             this.btnPreklici.UseVisualStyleBackColor = true;
             this.btnPreklici.Click += new System.EventHandler(this.btnPreklici_Click);
             // 
@@ -123,7 +123,7 @@
             this.btnNajdiVse.Name = "btnNajdiVse";
             this.btnNajdiVse.Size = new System.Drawing.Size(126, 53);
             this.btnNajdiVse.TabIndex = 7;
-            this.btnNajdiVse.Text = "NAJDI VSE";
+            this.btnNajdiVse.Text = "Najdi vse";
             this.btnNajdiVse.UseVisualStyleBackColor = true;
             // 
             // btnNazaj
@@ -134,7 +134,7 @@
             this.btnNazaj.Name = "btnNazaj";
             this.btnNazaj.Size = new System.Drawing.Size(126, 53);
             this.btnNazaj.TabIndex = 8;
-            this.btnNazaj.Text = "NAZAJ";
+            this.btnNazaj.Text = "Nazaj";
             this.btnNazaj.UseVisualStyleBackColor = true;
             // 
             // Iskalnik
